@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ *
+ * @category    Aydus
+ * @package     Aydus_DisallowPOBox
+ * @author      Aydus <davidt@aydus.com>
+ */
+-->
+<layout>
+	
+    <checkout_onepage_index>
+		<reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/aydus/disallowpobox/disallowpobox.js</name>
+            </action>
+		</reference>
+		
+		<reference name="before_body_end">
+			<block type="core/template" name="disallowpobox" template="aydus/disallowpobox/script.phtml"  />
+		</reference>
+		
+    </checkout_onepage_index>
+    
+</layout>

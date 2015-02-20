@@ -1,0 +1,5 @@
+app/code/community/Aydus/DisallowPOBox/                              app/code/community/Aydus/DisallowPOBox/
+app/design/frontend/base/default/layout/aydus/disallowpobox.xml      app/design/frontend/base/default/layout/aydus/disallowpobox.xml
+app/design/frontend/base/default/template/aydus/disallowpobox/       app/design/frontend/base/default/template/aydus/disallowpobox
+app/etc/modules/Aydus_DisallowPOBox.xml                              app/etc/modules/Aydus_DisallowPOBox.xml
+skin/frontend/base/default/js/aydus/disallowpobox/disallowpobox.js   skin/frontend/base/default/js/aydus/disallowpobox/disallowpobox.js

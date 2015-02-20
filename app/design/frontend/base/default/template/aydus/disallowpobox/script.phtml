@@ -1,0 +1,30 @@
+<?php 
+
+/**
+ * DisallowPOBox selectors
+ *
+ * @category    Aydus
+ * @package     Aydus_DisallowPOBox
+ * @author      Aydus <davidt@aydus.com>
+ */
+
+$storeId = Mage::app()->getStore()->getId();
+$disallowBillingPOBoxes = Mage::getStoreConfig('customer/address/disallow_poboxes', $storeId);
+$disallowShippingPOBoxes = Mage::getStoreConfig('shipping/option/disallow_poboxes', $storeId);
+?>
+
+<script>
+
+const POBOX_PATTERN = <?php echo Aydus_DisallowPOBox_Model_DisallowPOBox::POBOX_PATTERN ?>;
+
+var validatePOBoxSelectors = [];
+<?php if ($disallowBillingPOBoxes): ?>
+validatePOBoxSelectors.push('#billing\\:street1');
+validatePOBoxSelectors.push('#billing\\:street2');
+<?php endif; ?>
+<?php if ($disallowShippingPOBoxes): ?>
+validatePOBoxSelectors.push('#shipping\\:street1');
+validatePOBoxSelectors.push('#shipping\\:street2');
+<?php endif; ?>
+
+</script>

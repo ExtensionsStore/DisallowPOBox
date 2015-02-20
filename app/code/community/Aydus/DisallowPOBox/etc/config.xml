@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * DisallowPOBox config
+ *
+ * @category    Aydus
+ * @package     Aydus_DisallowPOBox
+ * @author      Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_DisallowPOBox>
+            <version>1.0.0</version>
+        </Aydus_DisallowPOBox>
+    </modules>  
+    <frontend>
+    	<events>
+			<controller_action_postdispatch_checkout_onepage_saveBilling>
+		        <observers>
+		            <disallowpobox_checkaddress>
+		                <class>aydus_disallowpobox/observer</class>
+		                <method>checkAddress</method>
+		            </disallowpobox_checkaddress>
+		        </observers>
+			</controller_action_postdispatch_checkout_onepage_saveBilling>
+			<controller_action_postdispatch_checkout_onepage_saveShipping>
+		        <observers>
+		            <disallowpobox_checkaddress>
+		                <class>aydus_disallowpobox/observer</class>
+		                <method>checkAddress</method>
+		            </disallowpobox_checkaddress>
+		        </observers>
+			</controller_action_postdispatch_checkout_onepage_saveShipping>
+    	</events>
+        <layout>
+            <updates>
+                <aydus_disallowpobox module="Aydus_DisallowPOBox">
+                    <file>aydus/disallowpobox.xml</file>
+                </aydus_disallowpobox>
+            </updates>
+        </layout>    	
+    </frontend>    
+    <global>
+        <helpers>
+            <aydus_disallowpobox>
+                <class>Aydus_DisallowPOBox_Helper</class>
+            </aydus_disallowpobox>
+        </helpers>  
+        <models>
+            <aydus_disallowpobox>
+                <class>Aydus_DisallowPOBox_Model</class>
+            </aydus_disallowpobox>
+        </models>          
+    </global>   
+</config>
