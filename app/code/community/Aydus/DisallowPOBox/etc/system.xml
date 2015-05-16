@@ -10,10 +10,10 @@
 -->
 <config>
     <sections>
-    	<customer>
-    		<groups>
-    			<address>
-    				<fields>
+        <customer>
+            <groups>
+                <address>
+                    <fields>
                         <disallow_poboxes translate="label" module="aydus_disallowpobox">
                             <label>Disallow PO Boxes in Billing Address</label>
                             <frontend_type>select</frontend_type>
@@ -22,12 +22,12 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-                            <comment>If Yes, customer will NOT be able to enter a PO Box as a street address</comment>
+                            <comment><![CDATA[If Yes, customer will NOT be able to enter a PO Box as a street address.]]></comment>
                         </disallow_poboxes>    				
-    				</fields>
-    			</address>
-    		</groups>
-    	</customer>
+                    </fields>
+                </address>
+            </groups>
+        </customer>
         <shipping>
             <groups>
                 <option>
@@ -40,7 +40,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-                            <comment>If Yes, customer will NOT be able to enter a PO Box as a street address</comment>
+                            <comment><![CDATA[If Yes, customer will NOT be able to enter a PO Box as a street address.]]></comment>
                         </disallow_poboxes>
                     </fields>  
                 </option>

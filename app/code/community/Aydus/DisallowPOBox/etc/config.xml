@@ -11,27 +11,34 @@
 <config>
     <modules>
         <Aydus_DisallowPOBox>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Aydus_DisallowPOBox>
     </modules>  
+    <phpunit>
+        <suite>
+            <modules>
+                <Aydus_DisallowPOBox />
+            </modules>
+        </suite>
+    </phpunit>    
     <frontend>
     	<events>
-			<controller_action_postdispatch_checkout_onepage_saveBilling>
-		        <observers>
-		            <disallowpobox_checkaddress>
-		                <class>aydus_disallowpobox/observer</class>
-		                <method>checkAddress</method>
-		            </disallowpobox_checkaddress>
-		        </observers>
-			</controller_action_postdispatch_checkout_onepage_saveBilling>
-			<controller_action_postdispatch_checkout_onepage_saveShipping>
-		        <observers>
-		            <disallowpobox_checkaddress>
-		                <class>aydus_disallowpobox/observer</class>
-		                <method>checkAddress</method>
-		            </disallowpobox_checkaddress>
-		        </observers>
-			</controller_action_postdispatch_checkout_onepage_saveShipping>
+            <controller_action_postdispatch_checkout_onepage_saveBilling>
+                <observers>
+                    <disallowpobox_checkaddress>
+                        <class>aydus_disallowpobox/observer</class>
+                        <method>checkAddress</method>
+                    </disallowpobox_checkaddress>
+                </observers>
+            </controller_action_postdispatch_checkout_onepage_saveBilling>
+            <controller_action_postdispatch_checkout_onepage_saveShipping>
+                <observers>
+                    <disallowpobox_checkaddress>
+                        <class>aydus_disallowpobox/observer</class>
+                        <method>checkAddress</method>
+                    </disallowpobox_checkaddress>
+                </observers>
+            </controller_action_postdispatch_checkout_onepage_saveShipping>
     	</events>
         <layout>
             <updates>
@@ -52,5 +59,17 @@
                 <class>Aydus_DisallowPOBox_Model</class>
             </aydus_disallowpobox>
         </models>          
-    </global>   
+    </global> 
+    <default>
+        <customer>
+            <address>
+                <disallow_poboxes>1</disallow_poboxes>
+            </address>
+        </customer>
+        <shipping>
+            <option>
+                <disallow_poboxes>1</disallow_poboxes>
+            </option>
+        </shipping>
+    </default>
 </config>

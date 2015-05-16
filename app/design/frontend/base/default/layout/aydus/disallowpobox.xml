@@ -10,16 +10,16 @@
 <layout>
 	
     <checkout_onepage_index>
-		<reference name="head">
+        <reference name="head">
             <action method="addItem">
                 <type>skin_js</type>
                 <name>js/aydus/disallowpobox/disallowpobox.js</name>
             </action>
-		</reference>
+        </reference>
 		
-		<reference name="before_body_end">
-			<block type="core/template" name="disallowpobox" template="aydus/disallowpobox/script.phtml"  />
-		</reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="disallowpobox" template="aydus/disallowpobox/script.phtml"  />
+        </reference>
 		
     </checkout_onepage_index>
     

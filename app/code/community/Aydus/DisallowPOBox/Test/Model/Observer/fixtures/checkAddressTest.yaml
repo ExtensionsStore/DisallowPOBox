@@ -1,0 +1,25 @@
+config:
+  default/customer/address/disallow_poboxes: 1
+  default/shipping/option/disallow_poboxes: 1
+tables:
+  sales/quote:
+    - entity_id: 1
+      store_id: 1
+      customer_email: davidt@aydus.com
+  sales/quote_address:
+    - address_id: 1
+      quote_id: 1
+      address_type: billing
+      street: P.O. Box 90213
+      city: New York
+      region: New York
+      region_id: 43
+      postcode: 10001
+    - address_id: 2
+      quote_id: 1
+      address_type: shipping
+      street: P.O. Box 90213
+      city: New York
+      region: New York
+      region_id: 43
+      postcode: 10001      
